@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if titre %}
+        <title>{{ titre }}</title>
+    {% else %}
+    <title>My Store</title>
+    {% endif %}
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <header >
+        <div class="headerImage">
+        </div>
+    </header>
+    <div id="nav">
+        <ul>
+            <li><a href="/">Adnane</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+        <div id="cart">0</div>
+    </div>
+    {% block content %}
+
+    {% endblock content %}
+
+    <footer>
+       <p class="footerText"> Created by Me 2020 |  Today: {{ today }} </p>
+    </footer>
+</body>
+</html>

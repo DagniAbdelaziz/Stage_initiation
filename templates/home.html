@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content%}
+    <div class="content">
+      {% for p in prods %}
+        <div class="card" id="{{ p.id }}">
+            <img src="static/images/{{ p.image }}" alt="">
+            <h2>{{ p.titre }}</h2>
+            <p class='prix'>{{ p.prix }} DH</p>
+            <p>{{ p.specs }} </p>
+            <button class="addtocart">Add to Cart</button>
+        </div>
+      {% endfor %}
+    </div>
+    <br><br><br><br>
+    <script src="/static/js/script.js"></script>
+{% endblock content%}
