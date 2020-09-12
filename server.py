@@ -16,7 +16,6 @@ class Product(db.Model):
     specs=db.Column(db.String(60) ,nullable=False)
     description=db.Column(db.Text,nullable=False)
 
-
 class Message(db.Model):
     id=db.Column(db.Integer,primary_key=True)
     nom=db.Column(db.String(20),nullable=False)
@@ -55,6 +54,18 @@ def contact():
         valid=True
     messages=Message.query.all()
     return  render_template("contact.html",valid=valid,messages=messages)
+
+    @app.route("/produit/<id>")
+    def produit(id):
+        products=Product.query.all()
+        id=products[int(id)]
+        titre=id.titre
+        description=id.description
+        prix=id.prix
+        image=id.image
+        specs=id.specs
+        return render_template("produit.html",id=id,titre=titre,prix=prix,specs=specs,image=image,description=description) 
+
 
 if __name__=="__main__":
     app.run(debug=True)

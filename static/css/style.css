@@ -141,3 +141,25 @@ form{
     background-color: green;
     border-radius: 15px;
 }
+.Product{
+    margin: 10px auto;
+    width: 60%;
+    height: 600px;
+    padding: 20px;
+    box-shadow: 0 8px 4px 0 black;
+}
+.descripton-proguct img{
+    float: left;
+    width: 300px;
+    height: 200px;
+}
+.parts-product h1{
+    font: arial;
+    font-size: 40px;
+}
+.parts-product{
+    text-align: center;
+}
+.description-product p{
+    font-size: 30px
+}
