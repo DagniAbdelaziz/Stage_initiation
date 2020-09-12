@@ -10,18 +10,21 @@ db=SQLAlchemy(app)
 
 class Product(db.Model):
     id=db.Column(db.Integer,primary_key=True)
-    titre=db.Column(db.String(20),nullable=False)
-    description=db.Column(db.String(60),nullable=False)
-    prix=db.Column(db.Integer,nullable=False)
     image=db.Column(db.String(20),nullable=False)
+    titre=db.Column(db.String(20),nullable=False)
+    prix=db.Column(db.Integer,nullable=False)
+    specs=db.Column(db.String(60) ,nullable=False)
+    description=db.Column(db.Text,nullable=False)
 
 
 class Message(db.Model):
     id=db.Column(db.Integer,primary_key=True)
     nom=db.Column(db.String(20),nullable=False)
-    mdate=db.Column(db.DateTime,default=datetime.datetime.utcnow)
+    mdate=db.Column(db.DateTime,default=datetime.datetime.utcnow,nullable=False)
     message=db.Column(db.Text,nullable=False)
-    mail=db.Column(db.String(20),nullable=False)
+    email=db.Column(db.String(20),nullable=False)
+    rate=db.Column(db.Integer,nullable=False)
+
 
 messages=[]
 
