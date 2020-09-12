@@ -125,3 +125,10 @@ form{
     color: black;
     cursor: pointer;
 }
+.txthead{
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    position: absolute;
+    top:50px;
+    margin-left: 40px;
+}
