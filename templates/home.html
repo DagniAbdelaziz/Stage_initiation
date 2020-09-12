@@ -11,7 +11,7 @@
     <div class="content">
       {% for p in prods %}
         <div class="card" id="{{ p.id }}">
-            <a href="/produit/{{p.id-1}}"><img src="static/images/{{ p.image }}" alt="" ></a>
+            <a href="/product/{{p.id-1}}" target="_blank"><img src="static/images/{{ p.image }}"id="lap" alt="" ></a>
             <h2>{{ p.titre }}</h2>
             <p class='prix'>{{ p.prix }} DH</p>
             <p>{{ p.specs }} </p>

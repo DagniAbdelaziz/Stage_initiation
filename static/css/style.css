@@ -98,7 +98,8 @@ form{
     padding: 10px;
 }
 .contactForm{
-    margin: 10px;
+    height: 400px;
+    margin: 30px;
     border: 1px solid gray;
     padding: 10px;
 }
@@ -148,18 +149,32 @@ form{
     padding: 20px;
     box-shadow: 0 8px 4px 0 black;
 }
-.descripton-proguct img{
+.descripton-product img{
     float: left;
     width: 300px;
     height: 200px;
+
 }
 .parts-product h1{
     font: arial;
     font-size: 40px;
+    display: inline-block;
 }
 .parts-product{
     text-align: center;
+    display: inline-block;
 }
 .description-product p{
     font-size: 30px
+    display: inline-block;
+}
+#plus{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+#myform{
+    display:none;
 }

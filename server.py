@@ -45,27 +45,27 @@ def contact():
     valid=False
     if request.method=="POST":
         nom=request.form.get("nom")
-        mail=request.form.get("mail")
+        email=request.form.get("email")
         message=request.form.get("message")
         mdate=request.form.get("mdate")
-        msg=Message(nom=nom, mail=mail,message=message,mdate=mdate)
+        rate=request.form.get("rate")
+        msg=Message(nom=nom, email=email,message=message,mdate=mdate,rate=rate)
         db.session.add(msg)
         db.session.commit()
         valid=True
     messages=Message.query.all()
+    messages.reverse()
     return  render_template("contact.html",valid=valid,messages=messages)
 
-    @app.route("/produit/<id>")
-    def produit(id):
-        products=Product.query.all()
-        id=products[int(id)]
+@app.route('/product/<id>')
+def get_product(id):
+        product=Product.query.all()
+        id=product[int(id)]
         titre=id.titre
         description=id.description
         prix=id.prix
         image=id.image
         specs=id.specs
-        return render_template("produit.html",id=id,titre=titre,prix=prix,specs=specs,image=image,description=description) 
-
-
+        return render_template('product.html',id=id,titre=titre,prix=prix,specs=specs,image=image,description=description)
 if __name__=="__main__":
     app.run(debug=True)
