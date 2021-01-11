@@ -1,0 +1,204 @@
+/*style du carte*/
+.maps{
+	overflow: hidden;
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: inline-flex;
+}
+.maps--image{
+	width: 50%;
+	margin-left: 10%;
+	margin-right: 100px;  
+
+}
+
+.maps--liste{
+	width: 20%;
+	height: 20%;
+	margin-left: 20px;
+}
+.region {
+    border: solid 1px white;
+    padding: 2px;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+	background-color: #a4ced2;
+
+}
+.path{
+	fill:#ffebeb;
+	stroke:#aaaaaa;
+	stroke-width :1px;
+}
+.maps--image path{
+	cursor: pointer;
+	
+}
+.maps--image .is-active path {
+	fill: #a4ced2;
+}
+.maps--liste a{
+	text-decoration :none;
+	transition: color 0.3s;
+    color: black;
+}
+
+.maps--liste a.is-active{
+	color: red;
+	font-weight: bold;
+	text-decoration:underline; 
+}
+    
+a{
+	text-align: center;
+	text-decoration:none; 
+}
+li:hover{
+    color: red;
+}
+#ul{
+	padding-left: 0px;
+}
+#para_ul{
+	color: red;
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+}
+/*style du graphe du fr*/
+#graphe{
+	border:solid 1px black; 
+    background-color:white;
+    width: 80%;
+    height: 550px;
+    overflow-y: scroll;
+    margin: auto;
+}
+.contener{
+    background-color : white;
+    width: 98%;
+    height: 700px;
+    margin: 10px;
+    margin-top: 0px;
+    margin-bottom: 100px;
+    position: relative;
+}
+#para-graphe{
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+}
+#sous-carte{
+	width: 95%;
+	height: 60px;
+	margin-bottom: 100px;
+	display: inline-flex;
+}
+#live{
+	width: 30%;
+	height: 100%;
+	padding: 3px;
+}
+#link-live{
+	width: 200px;
+	height: 60px;
+	border:solid 1px black;
+	display: flex;
+	background-color: grey;
+	border-radius: 6px;
+	margin-left: 20px;
+	color: black;
+}
+#a_link{
+	margin-left: 80px;
+	margin-top: 30px;
+}
+#img-live{
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+#Compteur{
+	font-size: 20px;
+	margin-top: 13px;
+}
+#div_mere{
+	width: 40%;
+	height: 60px;
+	margin-left: 1000px;
+}
+#p_mere{
+	font-weight: bold;
+	font-size: 40px;
+	text-align:center ;
+	margin-bottom: 10px;
+}
+/*style du haut de la page*/
+#Globale{
+	width: 70%;
+	height: 300px;
+	margin: auto;
+	margin-top: 40px;
+}
+#texte{
+	height: 30%;
+	width: 100%;
+}
+#statistique{
+	height: 38%;
+	width: 100%;
+}
+#date{
+	height: 30%;
+	width: 100%;
+}
+#description{
+	text-align: center;
+	color: black;
+}
+#donne{
+	height: 100%;
+	width: 32%;
+	display: inline-block;
+}
+.botton{
+	margin-left: 30%;
+	margin-top: 10%; 
+    cursor: pointer;
+    box-sizing: content-box; 
+    width: 20px;
+    height: 20px;
+}
+#date_para{
+	font-size: 20px;
+	text-align: right;
+	font-weight: bold;
+}
+.label-botton{
+	font-size: 30px;
+	font-weight: bold;
+	color: red;
+}
+.label-botton_2{
+	font-size: 30px;
+	font-weight: bold;
+	color: green;
+}
+.label-botton_3{
+	font-size: 30px;
+	font-weight: bold;
+	color: blue;
+}
+
+.red{
+	fill:#ff0000;
+}
+.green{
+	fill:green;
+}
+.blue{
+	fill:blue;
+}

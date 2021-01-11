@@ -6,25 +6,22 @@
     {% if titre %}
         <title>{{ titre }}</title>
     {% else %}
-    <title>My Store</title>
+    <title>Covid-19</title>
     {% endif %}
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
     <header >
-        <div class="headerImage">   
-            {%block H%}  
-            {%endblock H%}
-        </div>
-
+        <div class="headerImage"></div>
+        
     </header>
     <div id="nav">
         <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
+            <li><a href="/Statistique">Statistique</a></li>
+            <li><a href="/mond">Mond</a></li>
             <li><a href="/contact">Contact</a></li>
         </ul>
-        <div id="cart">0</div>
     </div>
     {% block content %}
 

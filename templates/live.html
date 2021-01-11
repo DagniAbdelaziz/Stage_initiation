@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content%}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="static/css/style-live.css">
+</head>
+<body>
+    <div id="titre_live">
+        <h1>Compteur temps réel du coronavirus dans le monde</h1>
+    </div>
+   <div id="time_live">
+        <p id="para_live">Live Stream & Tchat <br> {{today}}( - )</p>
+    </div>
+    <div id="div">
+        <div id="ytb_live" ng-show="event.gender == 'chat_streaming'">
+            <iframe width="100%" style="height:100%;" allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/NMre6IAAAiU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        </div>
+        <div id="form_live">
+            
+            <div id="titre_chat">
+                <h4>Live chat</h4>
+            </div>
+
+            <div id="div_mess">
+                {% for msg in messages %}
+                    <div class='msg_live'>
+                        <p>Name :{{msg.nom}}</p>
+                        <p>Message:<br/>{{msg.message}}</p>
+                        <p>{{msg.mdate}}</p>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class='contactForm_live'>
+                <div id="last_div">
+                   <form action="/live" method="POST" enctype="multipart/form-data" >
+                        <input name="message" id="message" >
+                        <input id="Envoyer" type="submit" value="Envoyer">
+                    </form> 
+                </div>
+                
+            </div>
+
+            
+            
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="static/js/script-live.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</body>
+</html>
+
+
+
+    
+{% endblock content%}

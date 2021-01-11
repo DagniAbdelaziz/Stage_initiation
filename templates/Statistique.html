@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content%}
+
+<link rel="stylesheet" type="text/css" href="static/css/style-Statistique.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+
+<div id="Globale">
+    <div id="texte">
+     	<h1 id="description">
+        	Les Statistique du Departement & Région COVID-19
+      	</h1>
+    </div>
+    <div id="date">
+      <p id="date_para"></p>
+    </div>
+</div>
+	<div id="table">
+		<table id="example" class="display" width="80%" id="id_table"></table>
+	</div>
+	
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+<script type="text/javascript" src="static/js/script-Statistique.js"></script>
+
+{% endblock content%}
+
+
+

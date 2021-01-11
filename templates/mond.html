@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content%}
+  <!DOCTYPE html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link rel="stylesheet" href="static/css/style-Mond.css">
+</head>
+<body>
+  <div id="Globale">
+    <div id="texte">
+      <h1 id="description">
+        Coronavirus dans le monde Répartition en morts par million habitants
+      </h1>
+    </div>
+    <div id="date">
+      <p id="date_para"></p>
+    </div>
+
+  </div>
+
+ 
+
+  <div id="rech">
+        <input type="text" id="mySearch" onkeyup="recherche()" placeholder="Search.." title="Type in a category">
+  </div>
+
+  <div class="contener">
+      <div id="dowal" >
+          <ul id="paye"></ul>
+      </div>
+      <div id="graphe">
+          <canvas id="myChart"  > 
+          </canvas>
+      </div>
+  </div>
+</body>
+<script src="static/js/script-Mond.js"></script>
+
+</html>
+{% endblock content%}
